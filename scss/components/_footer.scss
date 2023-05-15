@@ -1,0 +1,80 @@
+.footer{
+    
+    padding-top: 4rem;
+    &__wrapper{
+        
+        h2 span{
+            font-size: 1.2rem;
+            color: $clr-primary;
+        }
+        h4{
+            font-size: 1.2rem;
+        }
+        @include grid(2,0);
+        @include mediaQuery(){
+            @include grid (1,1rem);
+        } 
+        .itemRight{
+            gap: 5rem;
+            @include mediaQuery(){
+                flex-direction: column;
+            }
+            ul li{
+                &:nth-child(1){
+                    font-weight: bold;
+                }
+            }
+
+            .links{
+                gap: 3rem;
+            }
+
+            .footerServices a, .footerTours a, .footerQuicklinks a{
+                opacity: 80%;
+            }
+            a{
+                color: $clr-white;
+                
+            }
+            .footer__buttons{
+                .button1{
+                    width: 100px;
+                    text-align: center;
+                    color: $clr-gray;
+                }
+                .button2{
+                    width:110px;
+                    text-align: center;
+                    color: $clr-primary;
+                }
+                @include mediaQuery(){
+                    .button1{
+                        width: 80%;
+                        margin: 2 auto;
+                    }
+                    .button2{
+                        width: 82%;
+                    }
+                }
+            }
+    }
+}
+    &__last{
+        opacity: 80%;
+        @include mediaQuery(){
+            flex-direction: column;
+            gap: 1rem;
+        }
+    }
+    &__icons{
+        a{
+            color: $clr-primary;
+            margin-left: 1rem;
+            font-size: 28px;  
+            
+            &:hover{
+                color: $clr-white;
+            }
+        }
+    }
+}

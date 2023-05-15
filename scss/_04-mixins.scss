@@ -1,0 +1,56 @@
+@mixin centerAll{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin homeFlex{
+    display: flex;
+    gap: 4rem;
+}
+@mixin locFlex{
+    display:flex;
+    gap: 6rem;
+}
+
+@mixin centerSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin mediaQuery($width:48rem){
+    @media screen and (max-width:$width){
+        @content;
+    }
+}
+
+@mixin btn1($bg){
+    padding: 0.8rem 2.5rem;
+    color: $clr-gray;
+    font-weight: 600;
+    border-radius: 0.8rem;
+    display: inline-block;
+    background: $bg;
+    &:hover{
+        background-color: darken($bg, 10);
+    }
+}
+@mixin btn2($bg){
+    padding: 0.5rem 2rem;
+    color: $clr-primary;
+    font-weight: 600;
+    border: 2px solid $clr-primary;
+    border-radius: 0.8rem;
+    display: inline-block;
+    background: transparent;
+    &:hover{
+        background-color: $clr-primary;
+        color: $clr-gray !important;
+    }
+}
+
+@mixin grid($cols: 1, $gap: 1rem) {
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    grid-gap: $gap;
+  }
